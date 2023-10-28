@@ -7,8 +7,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "cd frontend && npm run build",
-    "prebuild": "cd backend && npm run build",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev-server": "json-server ./db.json  --watch"
