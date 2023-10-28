@@ -1,0 +1,152 @@
+<div class="container">
+    <h2>Enter User Details</h2>
+    <form [formGroup]="userDataForm" (ngSubmit)="onSubmit(userDataForm.value)" (change)="onSavetoLocal()">
+        <div class="userDataFormat">
+            <!-- **************************************************** NAME ************************************************ -->
+            <div>
+                <label for="name" id="nameLabel" class="bold">Name : </label>
+            </div>
+            <div>
+                <input type="text" name="name" id="name"  formControlName="name" 
+                    >
+                <span
+                    [ngClass]="!userDataForm.get('name').valid && userDataForm.get('name').touched ? 'errorDisplay' : 'errorHidden' ">Valid name
+                    is Required</span>
+            </div>
+            <!-- **************************************************** DOB ************************************************ -->
+            <div>
+                <label for="dob" id="dobLabel" class="bold">Date of Birth : </label>
+            </div>
+            <div>
+                <input type="date" name="dob" id="dob" formControlName="dob"
+                    class="setWidthforDate" >
+                <span
+                    [ngClass]="!userDataForm.get('dob').valid && userDataForm.get('dob').touched ? 'errorDisplay' : 'errorHidden' ">Valid DOB
+                    is Required</span>
+            </div>
+            <!-- **************************************************** EMAIL ************************************************ -->
+            <div>
+                <label for="email" id="emailLabel" class="bold">Email : </label>
+            </div>
+            <div>
+                <input type="email" name="email" id="email"
+                    formControlName="email">
+                <span
+                    [ngClass]="!userDataForm.get('email').valid && userDataForm.get('email').touched ? 'errorDisplay' : 'errorHidden' ">Valid Email
+                    is Required</span>
+            </div>
+            <!-- **************************************************** PHONE ************************************************ -->
+            <div>
+                <label for="number" id="numberLabel" class="bold">Phone Number : </label>
+            </div>
+            <div>
+                <input type="tel" name="number" id="number"
+                    formControlName="number" maxlength="10"  >
+                <span
+                    [ngClass]="!userDataForm.get('number').valid && userDataForm.get('number').touched ? 'errorDisplay' : 'errorHidden' ">Valid Phone
+                    number is Required</span>
+            </div>
+            <!-- **************************************************** EDUCATION ************************************************ -->
+            <div>
+                <label for="education" id="educationLabel" class="bold">Education :</label>
+            </div>
+            <div>
+                <section>
+            <div>
+                <label for="nameSchool" id="nameSchoolLabel">Name of Institute :</label>
+            </div>
+            <div>
+                <input type="text" name="nameSchool" id="nameSchool"
+                    formControlName="schoolName"><br>
+                <span
+                    [ngClass]="!userDataForm.get('schoolName').valid && userDataForm.get('schoolName').touched ? 'errorDisplay' : 'errorHidden' ">Institute Name is Required</span>
+            </div>
+            <div>
+                <label for="edu">Qualification : </label>
+            </div>
+            <div>
+                <select name="edu" id="edu" class="setWidthforAll"
+                    (change)="changeQua($event)" formControlName="qualification">
+                    <option value="SSC" >S.S.C.</option>
+                    <option value="HSC" >H.S.C.</option>
+                    <option value="B.Tech">B.Tech</option>
+                </select>
+            </div>
+            <div>
+                <label for="percentage">Percentage : </label>
+            </div>
+            <div>
+                <input type="number" id="percentage"
+                    formControlName="percentage" placeholder="Enter Percentage"
+                    formControlName="percentage"><br>
+                     <span
+                    [ngClass]="!userDataForm.get('percentage').valid && userDataForm.get('percentage').touched ? 'errorDisplay' : 'errorHidden' "> Valid percentage is Required</span>
+            </div>
+            </section>
+            </div>
+            
+            <!-- **************************************************** HOBBY ************************************************ -->
+            <div>
+                <label for="hobby" id="hobbyLabel" class="bold">Hobby : </label>
+                <span class="optional">(Optinal)</span>
+            </div>
+            <div formGroupName="hobby">
+                <input type="checkbox" name="cricket" id="cricket"
+                    value="cricket" formControlName="cricket" >
+                <label for="cricket" class="marginLeft">Cricket</label>
+                <input type="checkbox" name="travelling" id="travelling"
+                    value="travelling" class="marginLeft"
+                    formControlName="travelling">
+                <label for="travelling" class="marginLeft">Travelling</label>
+                <input type="checkbox" name="music" id="music" value="music"
+                    class="marginLeft" formControlName="music">
+                <label for="music" class="marginLeft">Music</label><br>
+                <input type="checkbox" name="finance" id="finance"
+                    value="finance" formControlName="finance">
+                <label for="finance" class="marginLeft">Finance</label>
+                <input type="checkbox" name="other" id="other"
+                    class="marginLeft" formControlName="others" >
+                <label for="other" class="marginLeft">Other</label>
+            </div>
+            <!-- **************************************************** GENDER ************************************************ -->
+            <div>
+                <label for="gender" id="genderLabel" class="bold">Gender : </label>
+            </div>
+            <div>
+                <input type="radio" name="gender" value="male" id="male"
+                    formControlName="gender">
+                <label for="male" class="marginLeft">Male</label>
+                <input type="radio" name="gender" value="female" id="female"
+                    formControlName="gender" class="marginLeft">
+                <label for="female" class="marginLeft">Female</label>
+            </div>
+            <!-- **************************************************** ADDRESS ************************************************ -->
+            <div>
+                <label for="address" id="addressLabel" class="bold">Address : </label>
+                <span class="optional">(Optinal)</span>
+            </div>
+            <div>
+                <textarea name="address" id="address" cols="22" rows="2"
+                    formControlName="address"></textarea>
+            </div>
+            <!-- **************************************************** Summary ************************************************ -->
+            <div>
+                <label for="summary" id="summaryLabel" class="bold">Summary : </label>
+                <span class="optional">(Optinal)</span>
+            </div>
+            <div>
+                <textarea name="summary" id="summary" cols="22" rows="3"
+                    placeholder="summary of user" formControlName="summary"></textarea>
+            </div>
+        </div>
+        <!-- **************************************************** BUTTONS    ************************************************ -->
+        <div class="buttons">
+            <button type="submit" id="submitBtn"
+                [disabled]="!userDataForm.valid" *ngIf="!editMode">Submit</button>
+            <button type="submit" id="submitBtn"
+                *ngIf="editMode" >Edit</button>
+            <button type="reset" id="resetBtn" *ngIf="!editMode" (click)="onReset()">Reset</button>
+            <button type="button" id="resetBtn"  (click)="onBack()">Cancel</button>
+        </div>
+    </form>
+</div>

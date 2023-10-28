@@ -1,0 +1,52 @@
+.container {
+  max-width: 20vw;
+  padding: 1rem;
+  margin-inline: auto;
+  margin-top: 20vh;
+  background-color: aqua;
+  border-radius: 0.5rem;
+}
+.container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container form h2 {
+  font-size: xx-large;
+}
+.container form label {
+  font-size: larger;
+}
+.container form input {
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  padding: 0.4rem;
+}
+.container form button {
+  margin: auto;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 0.8rem;
+  outline: none;
+  border: none;
+  color: green;
+  font-size: x-large;
+  font-weight: 700;
+}
+.container form #email-group {
+  margin-bottom: 0.5rem;
+  padding-inline: auto;
+}
+.container form #password-group {
+  margin-bottom: 0.5rem;
+  padding-inline: auto;
+}
+.container form .error_display {
+  font-size: smaller;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  visibility: visible;
+}
+.container form .error_hiden {
+  visibility: hidden;
+}/*# sourceMappingURL=app.component.css.map */

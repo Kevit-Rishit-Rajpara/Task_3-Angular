@@ -1,0 +1,135 @@
+.container {
+  background: rgb(217, 231, 200);
+  color: #20273a;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  padding: 1.2em;
+  width: 27em;
+  margin-inline: auto;
+  font-size: 20px;
+  border-radius: 0.5rem;
+  margin-top: 3.5rem;
+
+  h2 {
+    text-align: center;
+    margin-inline: auto;
+    margin-bottom: 3.5rem;
+  }
+  form {
+    .userDataFormat {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      grid-auto-flow: row;
+      grid-gap: 0.8em 0.5em;
+    }
+    .buttons {
+      button {
+        border-radius: 2rem;
+        background-color: #111827;
+        border: 1px solid transparent;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        flex: 0 0 auto;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        padding: 0.75rem 1.2rem;
+        text-align: center;
+        text-decoration: none #6b7280 solid;
+        text-decoration-thickness: auto;
+        transition-duration: 0.2s;
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: auto;
+        &:hover {
+          background-color: #374151;
+        }
+        &:focus {
+          box-shadow: none;
+          outline: 2px solid transparent;
+          outline-offset: 2px;
+        }
+        @media (min-width: 768px) {
+          .button-40 {
+            padding: 0.75rem 1.5rem;
+          }
+        }
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      gap: 2rem;
+    }
+
+    #submitBtn {
+      color: beige;
+    }
+    #resetBtn {
+      color: beige;
+    }
+    .errorDisplay {
+      margin-inline-start: 0.5rem;
+      color: red;
+      font-size: smaller;
+      visibility: visible;
+      font-size: 0.8rem;
+    }
+    .errorHidden {
+      visibility: hidden;
+    }
+    .optional {
+      font-size: 0.8rem;
+    }
+    section {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 0.8rem;
+      font-size: large;
+      align-items: center;
+    }
+    input,
+    textarea,
+    select {
+      outline: none;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.5rem;
+    }
+    .bold {
+      font-weight: 800;
+    }
+    .setWidthforAll {
+      width: 11.2rem;
+    }
+    .setWidthforDate {
+      width: 10.2rem;
+    }
+    .marginLeft {
+      margin-left: 0.5rem;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .container {
+    margin-top: 0 !important;
+    form {
+      .userDataFormat {
+        display: grid;
+        grid-template-columns: auto !important ;
+        grid-auto-flow: row;
+        grid-gap: 0.8em 0.5em;
+        justify-content: center;
+      }
+      button {
+        margin: 0;
+        width: 15% !important;
+      }
+    }
+  }
+}

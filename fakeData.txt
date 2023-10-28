@@ -1,0 +1,144 @@
+{
+  "users": [
+    {
+      "name": "Rishit Rajpara",
+      "dob": "2023-10-13",
+      "email": "20it023.rishit.rajpara@in",
+      "number": "546456",
+      "schoolName": "IMP",
+      "qualification": "HSC",
+      "percentage": 76,
+      "hobby": {
+        "cricket": null,
+        "travelling": true,
+        "music": null,
+        "finance": true,
+        "others": null
+      },
+      "gender": "male",
+      "address": null,
+      "summary": null,
+      "id": 1
+    },
+    {
+      "name": "Prince Bathani",
+      "dob": "2023-09-30",
+      "email": "test@test.com",
+      "number": "99999977",
+      "schoolName": "IMP",
+      "qualification": "HSC",
+      "percentage": 98,
+      "hobby": {
+        "cricket": null,
+        "travelling": true,
+        "music": null,
+        "finance": null,
+        "others": true
+      },
+      "gender": "male",
+      "address": null,
+      "summary": null,
+      "id": 2
+    },
+    {
+      "name": "Ankit Bodar",
+      "dob": "2023-10-01",
+      "email": "test@test.com",
+      "number": "9999999999",
+      "schoolName": "IMP",
+      "qualification": "SSC",
+      "percentage": 65,
+      "hobby": {
+        "cricket": null,
+        "travelling": true,
+        "music": null,
+        "finance": true,
+        "others": null
+      },
+      "gender": "male",
+      "address": "fgh",
+      "summary": "summery\n",
+      "id": 3
+    },
+    {
+      "name": "Ayush Poapt",
+      "dob": "2023-10-07",
+      "email": "test@test.com",
+      "number": "546456",
+      "schoolName": "IMP",
+      "qualification": "B.Tech",
+      "percentage": 80,
+      "hobby": {
+        "cricket": true,
+        "travelling": true,
+        "music": null,
+        "finance": true,
+        "others": null
+      },
+      "gender": "male",
+      "address": "jk,vbjn",
+      "summary": "hjkhfghfghjfj",
+      "id": 4
+    },
+    {
+      "name": "Dabhi Jay ",
+      "dob": "2023-09-29",
+      "email": "staff@gradlesol.com",
+      "number": "546456",
+      "schoolName": "IMP",
+      "qualification": "HSC",
+      "percentage": 89,
+      "hobby": {
+        "cricket": true,
+        "travelling": true,
+        "music": null,
+        "finance": null,
+        "others": null
+      },
+      "gender": "male",
+      "address": null,
+      "summary": null,
+      "id": 5
+    },
+    {
+      "name": "Dev ",
+      "dob": "2023-10-28",
+      "email": "test@test.com",
+      "number": "9999999999",
+      "schoolName": "IMP",
+      "qualification": "HSC",
+      "percentage": 87,
+      "hobby": {
+        "cricket": null,
+        "travelling": true,
+        "music": null,
+        "finance": true,
+        "others": null
+      },
+      "gender": "male",
+      "address": "ty",
+      "summary": "yrtrt",
+      "id": 6
+    },
+    {
+      "name": "Himanshu",
+      "dob": "2023-10-13",
+      "email": "himanshu@123.com",
+      "number": "9999999999",
+      "schoolName": "IMP",
+      "qualification": "SSC",
+      "percentage": 90,
+      "hobby": {
+        "cricket": true,
+        "travelling": null,
+        "music": null,
+        "finance": true,
+        "others": null
+      },
+      "gender": "male",
+      "address": "rt",
+      "summary": "ewr",
+      "id": 7
+    }
+  ]
+}

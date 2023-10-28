@@ -1,0 +1,25 @@
+
+
+
+
+<div class="container">
+    <h1>User Details</h1>
+    <hr>
+    <p><strong>Name : </strong>{{sharedData.name}} </p>
+    <p><strong>DOB : </strong>{{sharedData.dob | date:'longDate'}} </p> 
+    <p><strong>Email : </strong>{{sharedData.email}} </p>
+    <p><strong>Number : </strong>{{sharedData.number}} </p>
+    <p><strong>School Name : </strong>{{sharedData.schoolName}} </p>
+    <p><strong>Qualification : </strong>{{sharedData.qualification}} </p>
+    <p><strong>Percentage : </strong>{{sharedData.percentage}}% </p>
+    <p ><strong>Hobby : </strong><span *ngFor="let key of getKeysWithTrueValues(sharedData.hobby)">
+    {{key}}</span></p>
+    <p><strong>Gender : </strong>{{sharedData.gender}} </p> 
+    <p *ngIf="sharedData.address!==null "><strong>Address : </strong>{{sharedData.address}} </p>
+    <p *ngIf="sharedData.summary!==null "><strong>Summery : </strong>{{sharedData.summary}} </p>
+
+    <div class="buttons">
+    <button (click)="onEdit(sharedData)">Edit Details</button>
+    <button (click)="onGoBack()">Go Back</button>
+    </div>
+</div>

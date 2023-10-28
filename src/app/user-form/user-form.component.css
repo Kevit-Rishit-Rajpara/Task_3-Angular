@@ -1,0 +1,14 @@
+.userDataFormat {
+  display: grid;
+  grid-template-columns: 5% 30% 30%;
+  gap: 1rem;
+  margin-inline: auto;
+}
+
+#nameLabel {
+  grid-column-start: 1/2;
+}
+
+#nameInput {
+  grid-column-start: 2/3;
+}/*# sourceMappingURL=login-page.component.css.map */

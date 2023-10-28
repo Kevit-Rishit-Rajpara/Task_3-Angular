@@ -1,0 +1,204 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-inline: auto;
+  width: 80%;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 10rem;
+    h3 {
+      font-size: 3rem;
+      color: #223117;
+    }
+    .buttons {
+      display: flex;
+      gap: 1.5rem;
+      button {
+        border-radius: 2rem;
+        background-color: #111827;
+        border: 1px solid transparent;
+        border-radius: 2rem;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        flex: 0 0 auto;
+        font-size: 1.125rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        padding: 0.75rem 1.2rem;
+        text-align: center;
+        text-decoration: none #6b7280 solid;
+        text-decoration-thickness: auto;
+        transition-duration: 0.2s;
+        transition-property: background-color, border-color, color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: auto;
+        &:hover {
+          background-color: #374151;
+        }
+        &:focus {
+          box-shadow: none;
+          outline: 2px solid transparent;
+          outline-offset: 2px;
+        }
+        @media (min-width: 768px) {
+          .button-40 {
+            padding: 0.75rem 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .dataTable {
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    justify-content: center;
+    margin-inline: auto;
+    width: 80%;
+    table {
+      width: 100%;
+      text-align: center;
+      align-content: center;
+      border-collapse: collapse;
+    }
+
+    th {
+      padding: 1rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      font-size: large;
+      background-color: #3d8d74;
+      color: #ffeedd;
+    }
+
+    svg {
+      width: 1.5rem;
+      padding: 0 !important;
+      margin: 0 !important;
+      z-index: 100;
+      &:hover {
+        font-weight: bolder;
+        width: 1.5rem;
+        z-index: 10;
+      }
+    }
+    .p-0 {
+      padding: 0 !important;
+    }
+
+    .row {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      background-color: #d6eeee;
+      td {
+        padding: 0.7rem;
+      }
+      &:hover {
+        background-color: rgb(182, 174, 174);
+        cursor: pointer;
+        height: fit-content;
+        svg {
+          color: brown;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    margin: 0;
+    justify-content: center;
+    width: 100vw;
+  }
+  .dataTable {
+    width: 100vw;
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 830px) {
+  .container {
+    margin-inline: 2vw;
+    width: 95vw;
+    flex-wrap: wrap;
+    .header {
+       padding: 4vh 2vw !important;
+      gap: 20vw;
+      h3 {
+        font-size: 5vw !important;
+      }
+      button {
+        padding: 0.5vw !important;
+        width: 15vw !important;
+        font-size: 2vw !important;
+      }
+    }
+  }
+  .dataTable {
+    width: 100%;
+    margin-inline: 2vw;
+    table {
+      th,
+      tr {
+        font-size: 2vw !important;
+      }
+      th{
+        padding: 2vw !important;
+      }
+      td{
+        padding: 1vw !important;
+      }
+      svg {
+        width: 3vw !important;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    margin-inline: 2vw;
+    width: 95vw;
+    flex-wrap: wrap;
+
+    .header {
+      gap: 20vw;
+      padding: 4vh 2vw !important;  
+      width: 100%;
+      h3 {
+        font-size: 5vw !important;
+      }
+      button {
+        border-radius: 3vw !important;
+        padding: 0.5vw !important;
+        width: 40vw !important;
+        font-size: 10vw !important;
+      }
+      button {
+        padding: 0.5vw !important;
+        width: 10vw !important;
+        font-size: 1vw !important;
+      }
+    }
+  }
+  .dataTable {
+    width: 100%;
+    margin-inline: 2vw;
+    table {
+      th,
+      tr {
+        font-size: 2vw !important;
+      }
+      svg {
+        width: 3vw !important;
+      }
+    }
+  }
+}

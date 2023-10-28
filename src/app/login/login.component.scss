@@ -1,0 +1,104 @@
+.container {
+  max-width: 20vw;
+  padding: 1rem;
+  margin-inline: auto;
+  margin-top: 25vh;
+  background-color: #222924;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  height: 17rem;
+  border-radius: 0.5rem;
+  color: #f5eb6d;
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2 {
+      font-size: xx-large;
+      padding-bottom: 2.5rem;
+    }
+    input {
+      border-radius: 0.5rem;
+      outline: none;
+      border: none;
+      padding: 0.5rem;
+      color: #18453b;
+      background-color: antiquewhite;
+      width: 15vw;
+      font-size: large;
+    }
+    button {
+      margin: auto;
+      width: 8vw;
+      height: 2.5rem;
+      border-radius: 1.5rem;
+      outline: none;
+      border: none;
+      color: #4e2d2d;
+      font-size: x-large;
+      font-weight: 700;
+      margin-top: 2rem;
+      background-color: antiquewhite;
+      &:hover {
+        background-color: rgb(189, 95, 95);
+        color: white;
+      }
+    }
+    #email-group,
+    #password-group {
+      margin-bottom: 1rem;
+      padding-inline: auto;
+      height: 5vh;
+    }
+    .error_display {
+      font-size: smaller;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      visibility: visible;
+      margin-top: 0.3rem;
+      color: burlywood;
+    }
+    .error_hiden {
+      visibility: hidden;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 35vw;
+    padding: 2vw;
+    justify-content: center;
+    #email-group {
+      padding-inline: 0;
+    }
+    #password-group {
+      padding-inline: 0;
+    }
+    .error_display {
+      font-size: 1rem;
+    }
+    input {
+      width: 90% !important;
+    }
+    button {
+      margin: 0;
+      width: 50% !important;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    max-width: 100vw;
+    max-height: 100vh !important;
+    margin-inline: 0;
+    padding: 1vw;
+    input {
+      width: 90% !important;
+    }
+    button {
+      margin: auto;
+      width: 30% !important;
+    }
+  }
+}
